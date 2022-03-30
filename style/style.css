@@ -1,0 +1,109 @@
+:root { /*declaração de variáveis, possibilitando, nesse caso, mudar as cores em todo o documento, sem ter que ir buscando um a um. */
+    --vermelho: #e50914;
+    --preto: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*elementos base*/
+body {
+    background: var(--preto);
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    color:white
+}
+
+
+header .container {
+    display: flex;
+    flex-direction: row; /*modifica o conteúdo através da linha (row)*/
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    margin-left: 15px;
+    color: var(--vermelho);
+    font-family: 'Arial Black'; Times;
+    font-size: 40px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+/*filme principal*/
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url(../img/Outlander-fundo.jpg);
+    height: 400px;
+    background-size: cover; /*a imagem pega toda a área de cobertura da caixa.*/
+    
+    display: flex;
+    flex-direction: column; /*modifica o conteúdo através da coluna.*/
+    justify-content: center;
+    align-items: flex-start; /*começa sempre da esquerda*/
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: 70px;
+}
+
+.titulo {
+    margin-top: 10%;
+    margin-left: 15px;
+    font-size: 40px;    
+}
+
+.botao {
+    background-color: rgba(0,0,0,.50);
+    margin-left: 10px;
+    font-size: 12px;
+    border: none;
+    color: white;
+    padding: 15px;
+    margin-right: 16px;
+    border-radius: 4px;
+
+    cursor: pointer;
+    transition: 0.5s ease all; /*cuida da transição entre uma animação e outra*/
+}
+
+.botao:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+.em-alta {
+    margin: 5px;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrossel-filmes {
+    margin-top: 5px;
+}
+
+.item {
+    cursor: pointer;
+}
